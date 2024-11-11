@@ -16,9 +16,13 @@
     <strong>Pogrubiony tekst</strong><br>
     <a href="https://strefakursow.pl">Strefa kursów</a>
 </div>
+{% for post in posts %}
 <div>
-    {{posts }}
+    <p>opublikowany: {{post.publish_date}}</p>
+    <h2><a href="">{{post.title}}</a></h2>
+    <em>{{post.text|linebreaksbr}}</em>
 </div>
+{% endfor %}
 
 </body>
 </html>
